@@ -1,9 +1,13 @@
-.header{
-    position: relative;
+.body{
+    margin-bottom: 0;
 }
 
+/*.header{
+    position: relative;
+}*/
+
 .banner-valejur{
-    position: absolute;
+    position: relative;
     z-index: 1;
     margin: 0;
 }
