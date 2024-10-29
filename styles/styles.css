@@ -1,0 +1,71 @@
+.header{
+    position: relative;
+}
+
+.banner-valejur{
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+}
+
+.textos-banner{
+    display: block;
+}
+
+.banner{
+    font-family: 'Poppins';
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.slogan{
+    font-size: 36px;
+    font-weight: 900;
+    max-width: 50%;
+}
+
+.descricao-valejur{
+    font-size: 15px;
+    font-weight: 400;
+    max-width: 42%;
+}
+.body{
+    margin:0;
+}
+
+.botoes-banner{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.botao-contato{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #fff;
+    background-color: #FF0000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 50px;
+}
+
+.botao-servicos{
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #fff;
+    background-color: #FF0000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border: none;
+    border-radius: 4px;
+}
