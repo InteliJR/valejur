@@ -22,7 +22,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font-family);
-  font-size: 1rem; /* Base responsiva */
+  font-size: 1rem;
 }
 
 /* Hero Section */
@@ -103,4 +103,70 @@ body {
 
 .navbar li.active {
   border-bottom: 0.125rem solid #ff0000;
+}
+
+.footer {
+  background-color: #1e2a48;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 1rem;
+}
+
+.footer-column-wide {
+  flex: 1 1 400px;
+  max-width: 450px;
+}
+
+.footer-column h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.footer-column p, .footer-column ul, .footer-column li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-column li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+}
+
+.instagram-feed {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+.border-red-600 {
+  border-color: #ff0000;
 }
