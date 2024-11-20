@@ -39,7 +39,30 @@ export default function Home() {
             <button onClick={() => handleNavigation('contato')}>Entre em contato</button>
             <button onClick={() => handleNavigation('servicos')}>Conheça nossos serviços</button>
           </div>
+
         </main>
+      </div>
+
+      <div className="formulario">
+
+        <img src="/imagem-form.png" alt="IMAGEM formulario" className='imagem-form'/>
+
+        <div className='forms'>
+          <p className='entre-contato'>Entre em contato conosco</p>
+          <form action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br" method="POST">
+            <label for='name'>Nome</label>
+            <input type="text" name="name" required placeholder="Digite aqui..." />
+            <label for='email'>Email</label>
+            <input type="email" name="email" required placeholder="Digite aqui..." />
+            <label for="phone">Número de Telefone:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(12)34567-8910" pattern="\d{11}"/>
+            <label for='motivo'>Motivo do contato</label>
+            <input type="text" name="motivo" required placeholder="Porque decidiu nos contatar..." />
+            <label for='descreva'>Descreva brevemente o motivo do contato</label>
+            <input type="text" name="descreva" required placeholder="Nos conte um pouco sobre..." />
+            <button type="submit" className='botao-formulario'>Enviar</button>
+          </form>
+        </div>
       </div>
 
       {/* Footer */}
