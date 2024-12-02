@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import SobreNos from "./SobreNos";
 import MissaoVisaoValores from "./MissaoVisaoValores";
+import CarroselTrabalhos from "./CarroselTrabalhos";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -68,6 +69,10 @@ export default function Home() {
       {/* Seção Missão, Visão e Valores  */}
       <div id="missao-visao-valores">
         <MissaoVisaoValores />
+      </div>
+
+      <div>
+        <CarroselTrabalhos />
       </div>
 
       {/* Footer */}
