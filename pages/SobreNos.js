@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SobreNos = () => {
   return (
@@ -20,28 +20,27 @@ const SobreNos = () => {
             <h1 className="text-[32px] font-black font-poppins text-[#1A1B41] mb-6">
               Sobre nós
             </h1>
-            
-            <div className="text-[15px] font-poppins">
-              <span className="text-[#1A1B41] font-normal">
-                Lorem ipsum dolor sit amet. Sit eligendi dolorem et eveniet tempore ut nihil dicta est ducimus soluta.{' '}
+
+            <p className="subtitulo">
+              Na ValeJur, transformamos o Direito em{" "}
+              <span className="destaque">soluções práticas e acessíveis</span>.
+              Somos uma equipe jovem e dedicada, comprometida em oferecer
+              serviços como{" "}
+              <span className="destaque">
+                revisão de estatutos, elaboração de contratos, registro de
+                marcas
+              </span>{" "}
+              e <span className="destaque">adequação à LGPD</span>. Aqui,
+              aliamos <span className="destaque">conhecimento e inovação</span>{" "}
+              para construir o sucesso e a segurança jurídica dos nossos
+              clientes. Além disso, somos{" "}
+              <span className="destaque">EJ Destaque do triênio 21-24</span>,{" "}
+              <span className="destaque">EJ Constância em 2024</span>, e uma das{" "}
+              <span className="destaque">
+                TOP 3 EJ mais premiadas do NSP no EPEJ em 2024
               </span>
-              
-              <span className="text-red-600 font-bold">
-                Aut vitae esse ex aliquid{' '}
-              </span>
-              
-              <span className="text-[#1A1B41] font-normal">
-                enim sit molestiae enim non suscipit doloribus. Sed fugiat corrupti nam voluptatem maxime et pariatur deleniti eos corrupti dolorem. Quo autem dolorum ex eligendi molestiae ex quia omnis. Qui fuga nesciunt quo iusto dicta{' '}
-              </span>
-              
-              <span className="text-red-600 font-extrabold">
-                aut voluptatum{' '}
-              </span>
-              
-              <span className="text-[#1A1B41] font-normal">
-                possimus. Rem beatae quibusdam et beatae odit sit saepe autem est repellat voluptatem. Vel deserunt cupiditate ea perspiciatis ullam qui voluptates dicta sed galisum necessitatibus sed.
-              </span>
-            </div>
+              .
+            </p>
           </div>
         </div>
       </div>

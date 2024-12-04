@@ -22,19 +22,19 @@ const MissaoVisaoValores = () => {
       id: "mission",
       title: "Missão",
       content:
-        "Lorem ipsum dolor sit amet. Sit eligendi dolorem et eveniet tempore ut nihil dicta est ducimus soluta. Aut vitae esse ex aliquid enim sit molestiae enim non suscipit doloribus. Sed fugiat corrupti nam voluptatem maxime et pariatur deleniti eos corrupti dolorem.",
+        "Proporcionar acesso facilitado à assistência jurídica empresarial, promovendo o empreendedorismo, a liderança e o desenvolvimento pessoal e profissional de nossos membros, impactando positivamente a sociedade e contribuindo para a equidade e igualdade através da inovação e da vivência prática.",
     },
     {
       id: "vision",
       title: "Visão",
       content:
-        "Lorem ipsum dolor sit amet. Sit eligendi dolorem et eveniet tempore ut nihil dicta est ducimus soluta. Aut vitae esse ex aliquid enim sit molestiae enim non suscipit doloribus. Sed fugiat corrupti nam voluptatem maxime et pariatur deleniti eos corrupti dolorem.",
+        "Ser reconhecida como a principal referência em inovação e excelência no movimento Empresa Júnior, liderando com ética e responsabilidade social, impulsionando o desenvolvimento empresarial e formando futuros profissionais comprometidos com o crescimento sustentável da sociedade.",
     },
     {
       id: "values",
       title: "Valores",
       content:
-        "Lorem ipsum dolor sit amet. Sit eligendi dolorem et eveniet tempore ut nihil dicta est ducimus soluta. Aut vitae esse ex aliquid enim sit molestiae enim non suscipit doloribus. Sed fugiat corrupti nam voluptatem maxime et pariatur deleniti eos corrupti dolorem.",
+        "Inovação, ética e integridade, responsabilidade social, compromisso, colaboração, transparência, disciplina, proatividade, excelência e orgulho de ser MEJ.",
     },
   ];
 
