@@ -79,11 +79,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem;
-  max-width: 75rem;
-  margin: 0 auto;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;  /* Garante que a navbar vá até a borda esquerda */
+  width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
+  background-image: url('/backgroundValejur.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 10; /* Coloca a navbar acima de outros elementos */
 }
 
 .logo img {
