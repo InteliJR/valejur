@@ -210,7 +210,7 @@ label {
   display: flex;
   gap: 5%;
   margin-top: 5rem;
-  margin-bottom: 16rem;
+  margin-bottom: 6rem;
 }
 
 .forms{
@@ -239,7 +239,7 @@ label {
 .container-carrossel {
   max-width: 75vw;
   margin: 0 auto;
-   
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -273,6 +273,12 @@ label {
 .next-button {
   right: -20px;
   
+}
+
+.titulo-carrossel{
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .container-carrossel .carrossel .item {
