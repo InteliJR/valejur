@@ -83,6 +83,11 @@ export default function Home() {
         <MissaoVisaoValores />
       </div>
 
+      <div className="titulo-carrossel">
+        <h2 className="titulo">Nossos Serviços</h2>
+        <p className="subtitulo">Conheça nossas áreas de atuação para empresas e pessoas físicas</p>
+      </div>
+
       <div ref={servicosRef} id="servicos">
         <CarrosselServicos />
       </div>
