@@ -236,7 +236,7 @@ label {
 .container-carrossel {
   max-width: 75vw;
   margin: 0 auto;
-  overflow: hidden;
+   
   position: relative;
 }
 
@@ -259,15 +259,17 @@ label {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  z-index: 20; 
+  z-index: 999; 
 }
 
 .prev-button {
-  left: -20px; 
+  left: -20px;
+  z-index: 999;
 }
 
 .next-button {
-  right: -20px;  
+  right: -20px;
+  
 }
 
 .container-carrossel .carrossel .item {
@@ -308,6 +310,9 @@ label {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 5px 0;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   max-width: fit-content;
 }
 
@@ -330,8 +335,11 @@ label {
 .container-carrossel .toggle-button {
   color: #ff0000;
   position: absolute;
-  bottom: 10px;
+  justify-content: center;
+  bottom: 20px;
   border: none;
+  margin-left: auto;
+  margin-right: auto; 
   cursor: pointer;
   font-size: 0.9rem;
   margin-top: 5px;

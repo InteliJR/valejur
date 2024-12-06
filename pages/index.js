@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import CarrosselServicos from './components/carrossel-servicos';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -43,8 +44,9 @@ export default function Home() {
         </main>
       </div>
 
-      <div className="formulario">
+      <CarrosselServicos />
 
+      <div className="formulario">
         <img src="/imagem-form.png" alt="IMAGEM formulario" className='imagem-form'/>
 
         <div className='forms'>
