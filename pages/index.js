@@ -7,27 +7,42 @@ import CarroselTrabalhos from "./components/CarroselTrabalhos";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleNavigation = (section) => {
     setActiveSection(section);
-    document.getElementById(section).scrollIntoView({ behavior: "smooth", block: "center" });
+    setIsMenuOpen(false);
+    document.getElementById(section).scrollIntoView({ 
+      behavior: "smooth",
+      block: "center"
+    });
   };
 
   return (
     <div style={{ backgroundColor: "white" }}>
-      {/* Navbar e Hero Section */}
       <div className="hero" id="home">
         <header className="navbar">
           <Link href="/" className="logo">
             <img src="/logoValejur.png" alt="VALEJUR Logo" />
           </Link>
-          <nav>
+          
+          <button 
+            className="hamburger"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <nav className={isMenuOpen ? 'open' : ''}>
             <ul>
               {[
                 "Home",
                 "Sobre nós",
-                "Servicos",
-                "Cases e Resultados",
+                "Serviços",
+                "Cases e resultados",
                 "Contato",
               ].map((section) => (
                 <li
@@ -70,7 +85,7 @@ export default function Home() {
         <MissaoVisaoValores />
       </div>
 
-      <div style={{ backgroundColor: "white" }} id="servicos">
+      <div style={{ backgroundColor: "white" }} id="serviços">
         <CarrosselServicos />
       </div>
 

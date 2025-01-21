@@ -88,25 +88,62 @@ body {
   z-index: 10; /* Coloca a navbar acima de outros elementos */
 }
 
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: #1e2a48; /* Dark blue from your screenshot */
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  width: 2rem;
+  height: 0.25rem;
+  background: white; /* Changed to white to match your theme */
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+/* Navigation Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem; /* Space between menu items */
+}
+
+nav ul li {
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li:hover {
+  opacity: 0.8;
+}
+
 .logo img {
   height: 2.5rem;
 }
-
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 5.3125rem;
-}
-
-.navbar li {
-  cursor: pointer;
-  color: white;
-}
-
-.navbar li.active {
-  border-bottom: 0.125rem solid #ff0000;
-}
-
 .footer {
   background-color: #1e2a48;
   color: white;
@@ -243,6 +280,35 @@ label {
 }
 
 @media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #1e2a48;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
   .formulario {
     flex-direction: column;
     align-items: center;
