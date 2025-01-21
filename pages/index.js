@@ -70,7 +70,7 @@ export default function Home() {
             <button onClick={() => handleNavigation("contato")}>
               Entre em contato
             </button>
-            <button onClick={() => handleNavigation("servicos")}>
+            <button onClick={() => handleNavigation("serviços")}>
               Conheça nossos serviços
             </button>
           </div>
