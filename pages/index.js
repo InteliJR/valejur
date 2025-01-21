@@ -10,13 +10,13 @@ export default function Home() {
 
   const handleNavigation = (section) => {
     setActiveSection(section);
-    document.getElementById(section).scrollIntoView({ behavior: "smooth" });
+    document.getElementById(section).scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   return (
     <div style={{ backgroundColor: "white" }}>
       {/* Navbar e Hero Section */}
-      <div className="hero">
+      <div className="hero" id="home">
         <header className="navbar">
           <Link href="/" className="logo">
             <img src="/logoValejur.png" alt="VALEJUR Logo" />
@@ -26,8 +26,8 @@ export default function Home() {
               {[
                 "Home",
                 "Sobre nós",
-                "Serviços",
-                "Cases e resultados",
+                "Servicos",
+                "Cases e Resultados",
                 "Contato",
               ].map((section) => (
                 <li
@@ -62,30 +62,27 @@ export default function Home() {
         </main>
       </div>
 
-      <div>
+      <div id="sobre nós">
         <SobreNos />
       </div>
 
-      <div style={{ backgroundColor: "white" }}>
+      <div style={{ backgroundColor: "white" }} id="missao-visao-valores">
         <MissaoVisaoValores />
       </div>
 
-      <div style={{ backgroundColor: "white" }}>
+      <div style={{ backgroundColor: "white" }} id="servicos">
         <CarrosselServicos />
       </div>
 
-      <div>
+      <div id="cases e resultados">
         <CarroselTrabalhos />
       </div>
 
       <div
         className="formulario"
+        id="contato"
         style={{
-          backgroundColor: "white",
-          display: "flex",
-          flexDirection: "row",
           justifyContent: "center",
-          alignItems: "center",
           gap: "20px",
         }}
       >
@@ -94,27 +91,28 @@ export default function Home() {
           alt="IMAGEM formulario"
           className="imagem-form"
         />
+
         <div className="forms">
           <p className="entre-contato">Entre em contato conosco</p>
           <form
             action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br"
             method="POST"
           >
-            <label htmlFor="name">Nome</label>
+            <label for="name">Nome</label>
             <input
               type="text"
               name="name"
               required
               placeholder="Digite aqui..."
             />
-            <label htmlFor="email">Email</label>
+            <label for="email">Email</label>
             <input
               type="email"
               name="email"
               required
               placeholder="Digite aqui..."
             />
-            <label htmlFor="phone">Número de Telefone:</label>
+            <label for="phone">Número de Telefone:</label>
             <input
               type="tel"
               id="phone"
@@ -123,14 +121,14 @@ export default function Home() {
               placeholder="(12)34567-8910"
               pattern="\d{11}"
             />
-            <label htmlFor="motivo">Motivo do contato</label>
+            <label for="motivo">Motivo do contato</label>
             <input
               type="text"
               name="motivo"
               required
               placeholder="Porque decidiu nos contatar..."
             />
-            <label htmlFor="descreva">
+            <label for="descreva">
               Descreva brevemente o motivo do contato
             </label>
             <input
