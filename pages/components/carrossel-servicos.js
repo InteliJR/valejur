@@ -89,8 +89,7 @@ function CarrosselServicos() {
   };
 
   return (
-    <>
-      <div className="container-carrossel">
+      <div className="container-carrossel" backgroud-color="white">
         <button onClick={prevSlide} className="prev-button">
           {"<"}
         </button>
@@ -103,7 +102,6 @@ function CarrosselServicos() {
           {">"}
         </button>
       </div>
-    </>
   );
 
   function Card({ item }) {
