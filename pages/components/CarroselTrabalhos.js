@@ -2,14 +2,14 @@ import React from "react";
 
 const CarroselTrabalhos = () => {
   const imagens = [
-    "https://via.placeholder.com/100", // Lembrete para trocar pelas imagens da Valejur
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
-    "https://via.placeholder.com/100",
+    "../public/backgroundValejur.png", // Lembrete para trocar pelas imagens da Valejur
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
+    "../public/backgroundValejur.png",
   ];
 
   return (

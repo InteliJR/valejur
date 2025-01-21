@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #872222;
+    --background: #1e2a48;
     --foreground: #ededed;
   }
 }
@@ -84,9 +84,7 @@ body {
   top: 0;
   left: 0;  /* Garante que a navbar vá até a borda esquerda */
   width: 100%; /* Garante que a navbar ocupe toda a largura da tela */
-  background-image: url('/backgroundValejur.png');
-  background-size: cover;
-  background-position: center;
+  background-color: #1e2a48;
   z-index: 10; /* Coloca a navbar acima de outros elementos */
 }
 
@@ -206,18 +204,15 @@ label {
   line-height: normal;
 }
 
-.formulario{
+.formulario {
   display: flex;
   gap: 5%;
-  margin-top: 5rem;
-  margin-bottom: 16rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
 
-.forms{
-  margin-left: 3.125rem;
-}
-
-.imagem-form{
+.imagem-form {
   width: 100%;
   max-width: 31.25rem;
   max-height: 31.25rem;
@@ -225,7 +220,11 @@ label {
   border-radius: 1.875rem;
 }
 
-.botao-formulario{
+.forms {
+  margin-left: 3.125rem;
+}
+
+.botao-formulario {
   padding: 0.625rem 1.25rem;
   background-color: #ff0000;
   color: white;
@@ -234,6 +233,39 @@ label {
   font-size: 1rem;
   border-radius: 0.625rem;
   margin-top: 1.25rem;
+}
+
+.botao-formulario:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .formulario {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .imagem-form {
+    padding-left: 0;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .forms {
+    margin-left: 0;
+    width: 90%;
+    padding: 0;
+  }
+
+  .botao-formulario {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
 }
 
 .container-carrossel {

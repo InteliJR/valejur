@@ -78,34 +78,43 @@ export default function Home() {
         <CarroselTrabalhos />
       </div>
 
-      <div className="formulario" style={{ backgroundColor: "white" }} margin = "0px 0px 0px 0px">
+      <div
+        className="formulario"
+        style={{
+          backgroundColor: "white",
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "20px",
+        }}
+      >
         <img
           src="/imagem-form.png"
           alt="IMAGEM formulario"
           className="imagem-form"
         />
-
         <div className="forms">
           <p className="entre-contato">Entre em contato conosco</p>
           <form
             action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br"
             method="POST"
           >
-            <label for="name">Nome</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               name="name"
               required
               placeholder="Digite aqui..."
             />
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               name="email"
               required
               placeholder="Digite aqui..."
             />
-            <label for="phone">Número de Telefone:</label>
+            <label htmlFor="phone">Número de Telefone:</label>
             <input
               type="tel"
               id="phone"
@@ -114,14 +123,14 @@ export default function Home() {
               placeholder="(12)34567-8910"
               pattern="\d{11}"
             />
-            <label for="motivo">Motivo do contato</label>
+            <label htmlFor="motivo">Motivo do contato</label>
             <input
               type="text"
               name="motivo"
               required
               placeholder="Porque decidiu nos contatar..."
             />
-            <label for="descreva">
+            <label htmlFor="descreva">
               Descreva brevemente o motivo do contato
             </label>
             <input
