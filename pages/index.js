@@ -95,7 +95,6 @@ export default function Home() {
 
       <div
         className="formulario"
-        id="contato"
         style={{
           justifyContent: "center",
           gap: "20px",
@@ -107,7 +106,7 @@ export default function Home() {
           className="imagem-form"
         />
 
-        <div className="forms">
+        <div className="forms" id="contato">
           <p className="entre-contato">Entre em contato conosco</p>
           <form
             action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br"
