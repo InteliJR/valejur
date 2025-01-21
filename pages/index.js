@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { useState } from "react";
 import CarrosselServicos from "./components/carrossel-servicos";
-import MissaoVisaoValores from "./MissaoVisaoValores";
-import SobreNos from "./SobreNos";
-import CarroselTrabalhos from "./CarroselTrabalhos";
+import MissaoVisaoValores from "./components/MissaoVisaoValores";
+import SobreNos from "./components/SobreNos";
+import CarroselTrabalhos from "./components/CarroselTrabalhos";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
@@ -14,7 +14,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: "white" }}>
       {/* Navbar e Hero Section */}
       <div className="hero">
         <header className="navbar">
@@ -70,7 +70,7 @@ export default function Home() {
         <MissaoVisaoValores />
       </div>
 
-      <div>
+      <div style={{ backgroundColor: "white" }}>
         <CarrosselServicos />
       </div>
 
@@ -78,7 +78,7 @@ export default function Home() {
         <CarroselTrabalhos />
       </div>
 
-      <div className="formulario">
+      <div className="formulario" style={{ backgroundColor: "white" }} margin = "0px 0px 0px 0px">
         <img
           src="/imagem-form.png"
           alt="IMAGEM formulario"
@@ -235,6 +235,6 @@ export default function Home() {
           ></iframe>
         </div>
       </footer>
-    </>
+    </div>
   );
 }
