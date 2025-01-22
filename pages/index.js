@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import CarrosselServicos from "./components/carrossel-servicos";
 import MissaoVisaoValores from "./components/MissaoVisaoValores";
 import SobreNos from "./components/SobreNos";
@@ -8,6 +8,7 @@ import CarroselTrabalhos from "./components/CarroselTrabalhos";
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   const handleNavigation = (section) => {
     setActiveSection(section);
@@ -17,6 +18,10 @@ export default function Home() {
       block: "center"
     });
   };
+
+  useEffect(() => {
+    setIsClient(true); // Atualiza o estado indicando que estamos no cliente
+  }, []);
 
   return (
     <div style={{ backgroundColor: "white" }}>
@@ -35,6 +40,7 @@ export default function Home() {
             <span></span>
             <span></span>
           </button>
+          
 
           <nav className={isMenuOpen ? 'open' : ''}>
             <ul>
@@ -224,20 +230,25 @@ export default function Home() {
             </li>
           </ul>
         </div>
-
+        
         <div className="footer-column">
           <h4 className="text-lg font-bold mb-2">Instagram</h4>
-          <a
-            href="https://www.instagram.com/ej.valejur/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="/instagram-feed-sample.png"
-              alt="Instagram Feed"
-              className="w-full rounded-md mt-4"
-            />
-          </a>
+          <div className="grid grid-cols-2 gap-4">
+            {isClient && (
+              <div className="instagram-post">
+                <iframe
+                  src="https://www.instagram.com/p/DC4PH-ApUDQ/embed"
+                  width="800"
+                  height="330" 
+                  frameBorder="0"
+                  scrolling="no"
+                  allowtransparency="true"
+                  title="Instagram Post"
+                  style={{ borderRadius: '8px', width: '200%' }}
+                ></iframe>
+              </div>
+            )}
+          </div>
         </div>
 
         <div className="footer-column footer-column-wide">
@@ -250,7 +261,7 @@ export default function Home() {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.861771303627!2d-45.1220589!3d-22.733378599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccc8e86da3b593%3A0x400550af63927cf1!2sR.%20Dom%20B%C3%B4sco%2C%20284%20-%20Centro%2C%20Lorena%20-%20SP%2C%2012600-100!5e0!3m2!1spt-BR!2sbr!4v1730821446042!5m2!1spt-BR!2sbr"
             className="w-full h-64 mt-4 border-2 border-red-600 rounded-md" /* Borda menor */
-            allowFullScreen=""
+            allowFullScreen="true"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
