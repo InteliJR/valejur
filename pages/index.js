@@ -47,6 +47,7 @@ export default function Home() {
               {[
                 "Home",
                 "Sobre nós",
+                "Missão, Visão e Valores",
                 "Serviços",
                 "Cases e resultados",
                 "Contato",
@@ -87,7 +88,7 @@ export default function Home() {
         <SobreNos />
       </div>
 
-      <div style={{ backgroundColor: "white" }} id="missao-visao-valores">
+      <div style={{ backgroundColor: "white" }} id="missão, visão e valores">
         <MissaoVisaoValores />
       </div>
 
@@ -208,24 +209,34 @@ export default function Home() {
         <div className="footer-column">
           <h4 className="text-lg font-bold mb-2">Mapa do site</h4>
           <ul className="space-y-2">
-            <li>
-              <Link href="#home" className="hover:underline">
+            <li id="home">
+              <Link href="#home" className="hover:underline" onClick={() => handleNavigation("home")}>
                 Home
               </Link>
             </li>
-            <li>
-              <Link href="#sobre-nos" className="hover:underline">
+            <li id="sobre nós">
+              <Link href="#sobre-nos" className="hover:underline" onClick={() => handleNavigation("sobre nós")}>
                 Sobre nós
               </Link>
             </li>
-            <li>
-              <Link href="#servicos" className="hover:underline">
+            <li id="Missao-Visao-Valores">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("missão, visão e valores")}>
+                Missão, Visão e Valores
+              </Link>
+            </li>
+            <li id="serviços">
+              <Link href="#servicos" className="hover:underline" onClick={() => handleNavigation("serviços")}>
                 Serviços
               </Link>
             </li>
-            <li>
-              <Link href="#cases-e-resultados" className="hover:underline">
+            <li id="cases e resultados">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("cases e resultados")}>
                 Cases e Resultados
+              </Link>
+            </li>
+            <li id="contato">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("contato")}>
+                Contato
               </Link>
             </li>
           </ul>
