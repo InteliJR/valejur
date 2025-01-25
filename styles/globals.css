@@ -59,6 +59,17 @@ body {
   margin: 0 auto 1.5rem;
 }
 
+.subtitulo {
+  color: #1a1b41;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.destaque {
+  color: #ff0000;
+  font-weight: bold;
+}
+
 /* Button Styles */
 .buttons {
   display: flex;
