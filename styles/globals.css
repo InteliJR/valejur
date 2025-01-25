@@ -294,7 +294,7 @@ label {
 .container-carrossel {
   max-width: 75vw;
   margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -332,6 +332,7 @@ label {
   justify-content: center;
   text-align: center;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .container-carrossel .carrossel .item {

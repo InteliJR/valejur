@@ -80,15 +80,12 @@ function CarrosselServicos() {
       <h2 className="text-2xl font-bold text-[#1a1a1a] text-center mb-2 font-poppins">
         Nossos serviços
       </h2>
+      <p className="text-[#1a1a1a] text-center mb-2 font-poppins">
+          Arraste para o lado para visualizar todos os serviços</p>
       <div className="carrossel" ref={carrosselRef}>
         {data.map((item, idx) => (
           <Card key={idx} item={item} />
         ))}
-      </div>
-      <div align="center">
-        <p style={{ color: "black" }}>
-          Arraste para o lado para visualizar todos os serviços
-        </p>
       </div>
     </div>
   );
