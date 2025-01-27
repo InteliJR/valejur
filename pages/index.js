@@ -1,117 +1,166 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import CarrosselServicos from "./components/carrossel-servicos";
-import MissaoVisaoValores from "./MissaoVisaoValores";
-import SobreNos from "./SobreNos";
-import CarroselTrabalhos from "./CarroselTrabalhos";
+import MissaoVisaoValores from "./components/MissaoVisaoValores";
+import SobreNos from "./components/SobreNos";
+import CarroselTrabalhos from "./components/CarroselTrabalhos";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [isClient, setIsClient] = useState(false); // Estado para garantir execução no cliente
+  const [activeSection, setActiveSection] = useState("home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
-  // Refs para as seções
-  const homeRef = useRef(null);
-  const sobreNosRef = useRef(null);
-  const missaoVisaoValoresRef = useRef(null);
-  const servicosRef = useRef(null);
-  const casesEResultadosRef = useRef(null);
-  const contatoRef = useRef(null);
+  const handleNavigation = (section) => {
+    setActiveSection(section);
+    setIsMenuOpen(false);
+    document.getElementById(section).scrollIntoView({ 
+      behavior: "smooth",
+      block: "center"
+    });
+  };
 
   useEffect(() => {
     setIsClient(true); // Atualiza o estado indicando que estamos no cliente
   }, []);
 
-  const handleNavigation = (section) => {
-    setActiveSection(section);
-
-    // Identificar qual ref deve ser usada
-    const sectionRefs = {
-      home: homeRef,
-      'sobre-nos': sobreNosRef,
-      missao: missaoVisaoValoresRef,
-      servicos: servicosRef,
-      'cases-e-resultados': casesEResultadosRef,
-      contato: contatoRef,
-    };
-
-    // Acessar o ref correspondente e fazer o scroll
-    if (sectionRefs[section] && sectionRefs[section].current) {
-      sectionRefs[section].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
-    <>
-      {/* Hero Section */}
-      <div className="hero" ref={homeRef}>
-        {/* Navbar fixa */}
+    <div style={{ backgroundColor: "white" }}>
+      <div className="hero" id="home">
         <header className="navbar">
           <Link href="/" className="logo">
             <img src="/logoValejur.png" alt="VALEJUR Logo" />
           </Link>
-          <nav>
+          
+          <button 
+            className="hamburger"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          
+
+          <nav className={isMenuOpen ? 'open' : ''}>
             <ul>
-              {['Home', 'Sobre nós', 'Serviços', 'Cases e resultados', 'Contato'].map((section) => (
+              {[
+                "Home",
+                "Sobre nós",
+                "Missão, Visão e Valores",
+                "Serviços",
+                "Cases e resultados",
+                "Contato",
+              ].map((section) => (
                 <li
                   key={section}
-                  className={activeSection === section.toLowerCase().replace(' ', '-') ? 'active' : ''}
-                  onClick={() => handleNavigation(section.toLowerCase().replace(' ', '-'))}
+                  className={
+                    activeSection === section.toLowerCase() ? "active" : ""
+                  }
+                  onClick={() => handleNavigation(section.toLowerCase())}
                 >
-                  <a>{section}</a>
+                  {section}
                 </li>
               ))}
             </ul>
           </nav>
         </header>
 
-        {/* Hero Content */}
         <main className="hero-content">
           <h1>Excelência Jurídica para Soluções Inteligentes.</h1>
-          <p>Lorem ipsum dolor sit amet. Qui cupiditate quia qui error dolor ut autem quia qui unde autem aut dolor dicta et magni neque. Et accusantium aut.</p>
+          <p>
+            Lorem ipsum dolor sit amet. Qui cupiditate quia qui error dolor ut
+            autem quia qui unde autem aut dolor dicta et magni neque. Et
+            accusantium aut.
+          </p>
           <div className="buttons">
-            <button onClick={() => handleNavigation('contato')}>Entre em contato</button>
-            <button onClick={() => handleNavigation('servicos')}>Conheça nossos serviços</button>
+            <button onClick={() => handleNavigation("contato")}>
+              Entre em contato
+            </button>
+            <button onClick={() => handleNavigation("serviços")}>
+              Conheça nossos serviços
+            </button>
           </div>
         </main>
       </div>
 
-      <div ref={sobreNosRef} id="sobre-nos">
+      <div id="sobre nós">
         <SobreNos />
       </div>
 
-      <div style={{ backgroundColor: "white" }} ref={missaoVisaoValoresRef} id="missao-visao-valores">
+      <div style={{ backgroundColor: "white" }} id="missão, visão e valores">
         <MissaoVisaoValores />
       </div>
 
-      <div className="titulo-carrossel">
-        <h2 className="titulo">Nossos Serviços</h2>
-        <p className="subtitulo">Conheça nossas áreas de atuação para empresas e pessoas físicas</p>
-      </div>
-
-      <div ref={servicosRef} id="servicos">
+      <div style={{ backgroundColor: "white" }} id="serviços">
         <CarrosselServicos />
       </div>
 
-      <div ref={casesEResultadosRef} id="cases-e-resultados">
+      <div id="cases e resultados">
         <CarroselTrabalhos />
       </div>
 
-      <div ref={contatoRef} id="contato" className="formulario">
-        <img src="/imagem-form.png" alt="IMAGEM formulario" className="imagem-form" />
-        <div className="forms">
+      <div
+        className="formulario"
+        style={{
+          justifyContent: "center",
+          gap: "20px",
+        }}
+      >
+        <img
+          src="/imagem-form.png"
+          alt="IMAGEM formulario"
+          className="imagem-form"
+        />
+
+        <div className="forms" id="contato">
           <p className="entre-contato">Entre em contato conosco</p>
-          <form action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br" method="POST">
-            <label htmlFor="name">Nome</label>
-            <input type="text" name="name" required placeholder="Digite aqui..." />
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" required placeholder="Digite aqui..." />
-            <label htmlFor="phone">Número de Telefone:</label>
-            <input type="tel" id="phone" name="phone" required placeholder="(12)34567-8910" pattern="\d{11}" />
-            <label htmlFor="motivo">Motivo do contato</label>
-            <input type="text" name="motivo" required placeholder="Porque decidiu nos contatar..." />
-            <label htmlFor="descreva">Descreva brevemente o motivo do contato</label>
-            <input type="text" name="descreva" required placeholder="Nos conte um pouco sobre..." />
-            <button type="submit" className="botao-formulario">Enviar</button>
+          <form
+            action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br"
+            method="POST"
+          >
+            <label for="name">Nome</label>
+            <input
+              type="text"
+              name="name"
+              required
+              placeholder="Digite aqui..."
+            />
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Digite aqui..."
+            />
+            <label for="phone">Número de Telefone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="(12)34567-8910"
+              pattern="\d{11}"
+            />
+            <label for="motivo">Motivo do contato</label>
+            <input
+              type="text"
+              name="motivo"
+              required
+              placeholder="Porque decidiu nos contatar..."
+            />
+            <label for="descreva">
+              Descreva brevemente o motivo do contato
+            </label>
+            <input
+              type="text"
+              name="descreva"
+              required
+              placeholder="Nos conte um pouco sobre..."
+            />
+            <button type="submit" className="botao-formulario">
+              Enviar
+            </button>
           </form>
         </div>
       </div>
@@ -120,22 +169,38 @@ export default function Home() {
       <footer className="footer bg-[#1e2a48] text-white py-8 flex flex-wrap gap-y-4 gap-x-8">
         <div className="footer-column">
           <Link href="/" className="logo">
-            <img src="/logoValejur.png" alt="VALEJUR Logo" className="w-36 mb-4" />
+            <img
+              src="/logoValejur.png"
+              alt="VALEJUR Logo"
+              className="w-36 mb-4"
+            />
           </Link>
           <p>CNPJ: 33.219.414/0001-65</p>
           <div className="flex items-center gap-2">
             <img src="/mail.png" alt="Email" className="w-4 h-4" />
-            <a href="mailto:dcomercial.valejur@gmail.com" className="hover:underline">dcomercial.valejur@gmail.com</a>
+            <a href="mailto:email@email.com" className="hover:underline">
+              email@email.com
+            </a>
           </div>
           <div className="flex items-center gap-2">
             <img src="/phone.png" alt="Telefone" className="w-4 h-4" />
-            <a href="tel:(35) 99222-4572" className="hover:underline">(35) 99222-4572</a>
+            <a href="tel:+55123456789" className="hover:underline">
+              12 3456 789
+            </a>
           </div>
           <div className="flex gap-4 mt-4">
-            <a href="https://www.linkedin.com/company/valejur/?originalSubdomain=br" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/company/valejur/?originalSubdomain=br"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
             </a>
-            <a href="https://www.facebook.com/ValeJur/?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.facebook.com/ValeJur/?locale=pt_BR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img src="/facebook.png" alt="Facebook" className="w-8 h-8" />
             </a>
           </div>
@@ -144,24 +209,48 @@ export default function Home() {
         <div className="footer-column">
           <h4 className="text-lg font-bold mb-2">Mapa do site</h4>
           <ul className="space-y-2">
-            <li><Link href="#home" className="hover:underline">Home</Link></li>
-            <li><Link href="#sobre-nos" className="hover:underline">Sobre nós</Link></li>
-            <li><Link href="#servicos" className="hover:underline">Serviços</Link></li>
-            <li><Link href="#cases-e-resultados" className="hover:underline">Cases e Resultados</Link></li>
+            <li id="home">
+              <Link href="#home" className="hover:underline" onClick={() => handleNavigation("home")}>
+                Home
+              </Link>
+            </li>
+            <li id="sobre nós">
+              <Link href="#sobre-nos" className="hover:underline" onClick={() => handleNavigation("sobre nós")}>
+                Sobre nós
+              </Link>
+            </li>
+            <li id="Missao-Visao-Valores">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("missão, visão e valores")}>
+                Missão, Visão e Valores
+              </Link>
+            </li>
+            <li id="serviços">
+              <Link href="#servicos" className="hover:underline" onClick={() => handleNavigation("serviços")}>
+                Serviços
+              </Link>
+            </li>
+            <li id="cases e resultados">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("cases e resultados")}>
+                Cases e Resultados
+              </Link>
+            </li>
+            <li id="contato">
+              <Link href="#cases-e-resultados" className="hover:underline" onClick={() => handleNavigation("contato")}>
+                Contato
+              </Link>
+            </li>
           </ul>
         </div>
-
-        {/* Instagram Feed Section */}
+        
         <div className="footer-column">
           <h4 className="text-lg font-bold mb-2">Instagram</h4>
           <div className="grid grid-cols-2 gap-4">
-            {/* Exibir uma publicação do Instagram via iframe */}
             {isClient && (
               <div className="instagram-post">
                 <iframe
-                  src="https://www.instagram.com/p/DC4PH-ApUDQ/embed"  // Substitua pela URL da sua postagem
-                  width="800"  // Aumentei a largura para 600px
-                  height="330"  // Diminui a altura para 400px
+                  src="https://www.instagram.com/p/DC4PH-ApUDQ/embed"
+                  width="800"
+                  height="330" 
                   frameBorder="0"
                   scrolling="no"
                   allowtransparency="true"
@@ -175,16 +264,20 @@ export default function Home() {
 
         <div className="footer-column footer-column-wide">
           <h4 className="text-lg font-bold mb-2">Onde estamos</h4>
-          <p>Rua Dom Bosco 284, Lorena, São Paulo<br />12600-100, BR</p>
+          <p>
+            Rua Dom Bosco 284, Lorena, São Paulo
+            <br />
+            12600-100, BR
+          </p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.861771303627!2d-45.1220589!3d-22.733378599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ccc8e86da3b593%3A0x400550af63927cf1!2sR.%20Dom%20B%C3%B4sco%2C%20284%20-%20Centro%2C%20Lorena%20-%20SP%2C%2012600-100!5e0!3m2!1spt-BR!2sbr!4v1730821446042!5m2!1spt-BR!2sbr"
-            className="w-full h-64 mt-4 border-2 border-red-600 rounded-md"
+            className="w-full h-64 mt-4 border-2 border-red-600 rounded-md" /* Borda menor */
             allowFullScreen="true"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

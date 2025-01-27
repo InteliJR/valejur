@@ -3,7 +3,7 @@ import React from "react";
 const SobreNos = () => {
   return (
     <div className="bg-white w-full py-12">
-      {/* Container principal com a mesma largura de Missão, Visão, Valores */}
+      {/* Container principal */}
       <div className="w-[88%] mx-auto bg-white">
         <div className="flex flex-col md:flex-row gap-8 items-start">
           {/* Imagem */}
@@ -15,7 +15,7 @@ const SobreNos = () => {
             />
           </div>
 
-          {/* Conteúdo - altura definida para igualar à imagem */}
+          {/* Conteúdo */}
           <div className="w-full md:w-1/2 h-[400px] flex flex-col justify-center">
             <h1 className="text-[32px] font-black font-poppins text-[#1A1B41] mb-6">
               Sobre nós
