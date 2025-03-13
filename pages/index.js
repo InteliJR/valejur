@@ -69,9 +69,7 @@ export default function Home() {
         <main className="hero-content">
           <h1>Excelência Jurídica para Soluções Inteligentes.</h1>
           <p>
-            Lorem ipsum dolor sit amet. Qui cupiditate quia qui error dolor ut
-            autem quia qui unde autem aut dolor dicta et magni neque. Et
-            accusantium aut.
+          A primeira e única Empresa Junior Jurídica do Vale do Paraíba, atuando desde 2018, formado por alunos do Centro Universitário Salesiano de São Paulo (UNISAL), unidade São Joaquim em Lorena-SP. 
           </p>
           <div className="buttons">
             <button onClick={() => handleNavigation("contato")}>
@@ -178,14 +176,14 @@ export default function Home() {
           <p>CNPJ: 33.219.414/0001-65</p>
           <div className="flex items-center gap-2">
             <img src="/mail.png" alt="Email" className="w-4 h-4" />
-            <a href="mailto:email@email.com" className="hover:underline">
-              email@email.com
+            <a href="mailto: dcomercial.valejur@gmail.com" className="hover:underline">
+            dcomercial.valejur@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
             <img src="/phone.png" alt="Telefone" className="w-4 h-4" />
-            <a href="tel:+55123456789" className="hover:underline">
-              12 3456 789
+            <a href="tel:(12)99707-5287" className="hover:underline">
+            (12) 99707-5287
             </a>
           </div>
           <div className="flex gap-4 mt-4">
