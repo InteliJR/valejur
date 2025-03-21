@@ -10,8 +10,7 @@ const CarroselTrabalhos = () => {
     "/jovens-projetistas.png",
     "/sanpro-jr.png",
     "/scitec-jr.png",
-    "/img_carrossel1.png",
-    "/img_carrossel1.png",
+    "/2-tons.jpg",
   ];
 
   return (
