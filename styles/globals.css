@@ -32,7 +32,7 @@ body {
 
 /* Hero Section */
 .hero {
-  background-image: url("/backgroundValejur.png");
+  background-image: url("/valejur/backgroundValejur.png");
   background-size: cover;
   background-position: center;
   color: var(--text-white);
