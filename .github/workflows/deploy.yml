@@ -22,7 +22,6 @@ jobs:
       - name: ⚒️ Build e Export
         run: |
           npm run build
-          npm run export
 
       - name: 🚀 Deploy para GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
