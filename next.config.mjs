@@ -5,6 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  basePath: '/valejur',
+  assetPrefix: '/valejur/',
 };
 
 export default nextConfig;
