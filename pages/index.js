@@ -28,7 +28,7 @@ export default function Home() {
       <div className="hero" id="home">
         <header className="navbar">
           <Link href="/" className="logo">
-            <img src="/logoValejur.png" alt="VALEJUR Logo" />
+            <img src="/valejur/logoValejur.png" alt="VALEJUR Logo" />
           </Link>
           
           <button 
@@ -106,7 +106,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/imagem-form.png"
+          src="/valejur/imagem-form.png"
           alt="IMAGEM formulario"
           className="imagem-form"
         />
@@ -168,20 +168,20 @@ export default function Home() {
         <div className="footer-column">
           <Link href="/" className="logo">
             <img
-              src="/logoValejur.png"
+              src="/valejur/logoValejur.png"
               alt="VALEJUR Logo"
               className="w-36 mb-4"
             />
           </Link>
           <p>CNPJ: 33.219.414/0001-65</p>
           <div className="flex items-center gap-2">
-            <img src="/mail.png" alt="Email" className="w-4 h-4" />
+            <img src="/valejur/mail.png" alt="Email" className="w-4 h-4" />
             <a href="mailto: dcomercial.valejur@gmail.com" className="hover:underline">
             dcomercial.valejur@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-2">
-            <img src="/phone.png" alt="Telefone" className="w-4 h-4" />
+            <img src="/valejur/phone.png" alt="Telefone" className="w-4 h-4" />
             <a href="tel:(12)99707-5287" className="hover:underline">
             (12) 99707-5287
             </a>
@@ -192,14 +192,14 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
+              <img src="/valejur/linkedin.png" alt="LinkedIn" className="w-8 h-8" />
             </a>
             <a
               href="https://www.facebook.com/ValeJur/?locale=pt_BR"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="/facebook.png" alt="Facebook" className="w-8 h-8" />
+              <img src="/valejur/facebook.png" alt="Facebook" className="w-8 h-8" />
             </a>
           </div>
         </div>

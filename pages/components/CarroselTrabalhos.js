@@ -4,13 +4,13 @@ const CarroselTrabalhos = () => {
   const [isHovered, setIsHovered] = useState(false);
   
   const imagens = [
-    "/eel-jr.png",
-    "/biosativa.png",
-    "/farmacia-in.png",
-    "/jovens-projetistas.png",
-    "/sanpro-jr.png",
-    "/scitec-jr.png",
-    "/2-tons.jpg",
+    "/valejur/eel-jr.png",
+    "/valejur/biosativa.png",
+    "/valejur/farmacia-in.png",
+    "/valejur/jovens-projetistas.png",
+    "/valejur/sanpro-jr.png",
+    "/valejur/scitec-jr.png",
+    "/valejur/2-tons.jpg",
   ];
 
   return (

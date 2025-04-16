@@ -9,7 +9,7 @@ const SobreNos = () => {
           {/* Imagem */}
           <div className="w-full md:w-1/2">
             <img
-              src="/backgroundValejur.png"
+              src="/valejur/backgroundValejur.png"
               alt="Sobre Nós"
               className="w-full h-[400px] object-cover"
             />

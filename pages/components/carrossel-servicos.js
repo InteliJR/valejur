@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 const data = [
   {
     nome: "Consultoria Jurídica Básica",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Análise e revisão de contratos.",
       "• Emissão de pareceres jurídicos sobre questões específicas.",
@@ -11,7 +11,7 @@ const data = [
   },
   {
     nome: "Direito Empresarial",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Orientação para constituição e registro de empresas.",
       "• Abertura de CNPJ: Assistência no processo de formalização e registro de empresas junto aos órgãos competentes.",
@@ -22,7 +22,7 @@ const data = [
   },
   {
     nome: "Direito Trabalhista",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Orientação sobre direitos e deveres trabalhistas para empresas.",
       "• Desenvolvimento de políticas internas e manuais de conduta.",
@@ -30,7 +30,7 @@ const data = [
   },
   {
     nome: "Direito Civil",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Elaboração de termos de uso e políticas de privacidade (LGPD).",
       "• Mediação extrajudicial e negociação de conflitos.",
@@ -39,7 +39,7 @@ const data = [
   },
   {
     nome: "Propriedade Intelectual",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Suporte no registro de marcas e patentes.",
       "• Consultoria para proteção de direitos autorais.",
@@ -47,7 +47,7 @@ const data = [
   },
   {
     nome: "Direito Digital",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Consultoria para adequação à LGPD e proteção de dados.",
       "• Elaboração de termos de uso e políticas de privacidade para sites e plataformas digitais.",
@@ -56,7 +56,7 @@ const data = [
   },
   {
     nome: "Planejamento Sucessório/ Direito de família",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Planejamento sucessório para empresas familiares.",
       "• Estruturação de acordos de sócios e planejamento societário.",
@@ -64,7 +64,7 @@ const data = [
   },
   {
     nome: "Direito Tributário Básico",
-    imagem: "/img_carrossel1.png",
+    imagem: "/valejur/img_carrossel1.png",
     descricao: [
       "• Planejamento tributário básico e otimização de carga tributária.",
       "• Regularização fiscal para pequenas empresas e independentes.",
