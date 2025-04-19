@@ -114,7 +114,7 @@ export default function Home() {
         <div className="forms" id="contato">
           <p className="entre-contato">Entre em contato conosco</p>
           <form
-            action="https://formsubmit.co/fernanda.nascimento@sou.inteli.edu.br"
+            action="https://formsubmit.co/dcomercial.valejur@gmail.com"
             method="POST"
           >
             <label for="name">Nome</label>
