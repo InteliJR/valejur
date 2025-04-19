@@ -63,7 +63,7 @@ const MissaoVisaoValores = () => {
             {/* Conteúdo da seção com animação de transição */}
             <div
               className={`transition-all duration-300 overflow-hidden ${
-                openSections[section.id] ? "max-h-[200px]" : "max-h-0"
+                openSections[section.id] ? "max-h-[280px]" : "max-h-0"
               }`}
             >
               <div className="w-full flex">
